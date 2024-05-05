@@ -47,7 +47,7 @@ const handleItemClick = () => {
   padding: 20px;
   border-radius: 12px;
   border: 1px solid #e5e5e5;
-  background-color: #eafaf2;
+  background-color:  var(--menu-item-background);
   color: var(--color-black);
   text-align: center;
   height: 280px;

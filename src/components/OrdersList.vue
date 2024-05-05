@@ -69,20 +69,27 @@ export default {
 
 <style scoped>
 .card {
-    /* width: 60%; */
     margin: 0 auto;
     border-radius: 12px !important;
     padding: 20px;
+    background-color: var(--card-background);
 }
 
 h4 {
     padding: 10px;
+    color: var(--color-black);
 }
 
 th {
     font-weight: bold;
     padding: 10px;
 }
+
+table, tr, td, th {
+  background-color: var(--list-item-color) !important;
+  color: var(--color-black);
+}
+
 
 @media screen and (max-width: 900px) {
     .card {

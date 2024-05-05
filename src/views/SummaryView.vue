@@ -137,13 +137,14 @@ const placeOrder = async () => {
     margin-bottom: 20px;
     padding: 20px;
     border-radius: 12px;
-    background-color: var(--color-white);
+    background-color: var(--card-background);
     border: 1px solid var(--color-light-grey);
 }
 
 .item>h5,
 .item>p {
     width: 50%;
+    color: var(--color-black);
 }
 
 .item p {
@@ -156,10 +157,7 @@ const placeOrder = async () => {
 .row>p {
     margin-top: 20px;
     text-align: center;
-}
-
-h2 {
-    text-align: center
+    color: var(--color-black);
 }
 
 a {
@@ -172,6 +170,7 @@ a {
 }
 #price > h3{
     text-align: center;
+    color: var(--color-black);
 }
 
 .next-button {

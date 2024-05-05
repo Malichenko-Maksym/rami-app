@@ -48,6 +48,10 @@ h3 {
     text-align: center !important;
 }
 
+p {
+    color: var(--color-black);
+}
+
 #buttons>div:nth-of-type(1) button {
     float: right;
 }
@@ -62,7 +66,7 @@ h3 {
 
 @media screen and (max-width: 900px) {
     #buttons button {
-       float: none !important;
+        float: none !important;
     }
 }
 </style>

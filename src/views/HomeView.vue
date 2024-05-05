@@ -85,6 +85,7 @@ img {
 
 #info {
   width: 80%;
+  color: var(--color-black);
   margin-top: 40px;
 }
 

@@ -44,6 +44,7 @@ const navigateUser = () => {
 <style scoped>
 #authors {
   margin-top: 100px;
+  color: var(--color-black);
 }
 
 h5 {
@@ -54,7 +55,7 @@ main {
   padding-top: 150px;
 }
 
-.row > div:nth-of-type(1) {
+.row>div:nth-of-type(1) {
   text-align: center;
 }
 
@@ -63,11 +64,11 @@ main {
     padding-top: 50px;
   }
 
-  .row > div:nth-of-type(1) button {
+  .row>div:nth-of-type(1) button {
     margin-top: 100px;
   }
 
-  .row > div:nth-of-type(2) {
+  .row>div:nth-of-type(2) {
     text-align: center;
   }
 

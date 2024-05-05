@@ -60,7 +60,7 @@ export default defineComponent({
 <style scoped>
 p {
   margin-top: 40px;
-
+  color: var(--color-black);
 }
 
 .google {
@@ -68,5 +68,6 @@ p {
   background-color: white !important;
   border: 1px solid blue !important;
   margin-top: 0px;
+  margin-bottom: 40px;
 }
 </style>

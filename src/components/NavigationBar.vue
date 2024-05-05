@@ -25,7 +25,7 @@
 div {
     width: 100%;
     position: absolute;  
-    background-color: var(--color-white);
+    background-color: var(--navigation-background);
     border-top: 1px solid var(--color-light-grey);
     bottom: 0;
     display: flex;
@@ -51,13 +51,13 @@ a {
     padding: 15px 40px 5px 40px;
     margin-left: 40px;
     margin-right: 40px;
-    background-color: #eafaf2;
+    /* background-color: var(--color-light-green); */
     border: 1px solid #e5e5e5;
     border-radius: 12px;
 }
 
 a:hover {
-    background-color: #cff8e4;
+    background-color: var(--light-green-hover);
 }
 
 @media only screen and (max-width: 900px) {

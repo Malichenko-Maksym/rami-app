@@ -7,7 +7,7 @@
 <style scoped>
   h1 {
     width: 100%;
-    color: #000000;
+    color: var(--color-black);
     padding: 40px 40px;
     font-weight: bold;
   }

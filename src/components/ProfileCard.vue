@@ -99,7 +99,7 @@ export default {
 
 <style scoped>
 .card {
-  /* width: 60%; */
+  background-color: var(--card-background);
   margin: 0 auto;
   border-radius: 12px !important;
 }
@@ -107,6 +107,7 @@ export default {
 .card-title,
 .card-text {
   text-align: center;
+  color: var(--color-black);
 }
 
 img {
@@ -127,6 +128,11 @@ input,
 textarea {
   margin: 0 auto;
   text-align: center;
+}
+
+.list-group-item {
+  background-color: var(--list-item-color) !important;
+  color: var(--color-black);
 }
 
 .list-group input {

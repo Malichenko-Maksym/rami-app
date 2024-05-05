@@ -1,6 +1,6 @@
 <script setup>
 import AppLogo from '../components/images/AppLogo.vue'
-import ScreenTitle from '../components/text/BigTitle.vue'
+import BigTitle from '../components/text/BigTitle.vue'
 import LoginForm from '../components/LoginForm.vue'
 </script>
 
@@ -13,10 +13,10 @@ import LoginForm from '../components/LoginForm.vue'
         </div>
         <div class="col-md-6">
           <div id="login-cart">
-            <ScreenTitle>
+            <BigTitle>
               <template #title>Zaloguj się</template>
-            </ScreenTitle>
-            <LoginForm />
+            </BigTitle>
+            <LoginForm></LoginForm>
           </div>
         </div>
       </div>
@@ -40,7 +40,7 @@ img {
   margin: 0 auto;
   text-align: center;
   border: 1px solid #e5e5e5;
-  background-color: #ffffff;
+  background-color: var(--card-background);
   border-radius: 25px;
   padding: 40px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);

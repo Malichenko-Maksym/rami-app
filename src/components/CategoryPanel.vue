@@ -29,14 +29,14 @@ div:hover {
 
 h3 {
     width: 100%;
-    color: var(--color-white);
+    color: #ffffff;
     text-align: left;
     padding: 20px 40px;
     font-weight: bold;
 }
 
 p{
-    color: var(--color-white);
+    color: #ffffff;
     margin-left: 40px;
     font-size: 1.1rem;
 }

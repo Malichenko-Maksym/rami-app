@@ -4,16 +4,31 @@
     --color-white: #ffffff;
     --color-black: #000000;
     --color-green: #26c87c;
+    --color-light-green: #121212;
+    --light-green-hover: #cff8e4;
     --background-color: #fcfcff;
+    --card-background: #ffffff;
     --color-orange: #da6317;
     --color-light-orange: rgba(254, 173, 29, 0.1);
     --color-light-grey: #e5e5e5;
+    --menu-item-background: #eafaf2;
+    --input-background: #ffffff;
+    --navigation-background: #ffffff;
 }
 
 @media (prefers-color-scheme: dark) {
     :root {
         --color-white: #000000;
         --color-black: #ffffff;
+        --color-light-green: #282828;
+        --light-green-hover: #27372e;
+        --background-color: #0d0d0e;
+        --card-background: #252525;
+        --menu-item-background: #252525;
+        --input-background: #252525;
+        --navigation-background: #252525;
+        --color-light-grey: #575757;
+        --list-item-color: #393939;
     }
 }
 

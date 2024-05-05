@@ -102,6 +102,7 @@ export default {
 #details {
     width: 50%;
     padding: 20px;
+    color: var(--color-black);
 }
 
 #confirm {
@@ -110,8 +111,8 @@ export default {
 }
 
 #confirm>button {
-    background-color: var(--color-light-grey) !important;
-    color: var(--color-black) !important;
+    background-color: #e5e5e5 !important;
+    color: #000000 !important;
 }
 
 #map-container {
