@@ -17,11 +17,15 @@ import MenuList from '../components/MenuList.vue'
           <template #title>MENU</template>
         </BigTitle>
       </div>
-      <div class="row">
+      <div class="row" id="menu-container">
         <MenuList />
       </div>
     </div>
   </main>
 </template>
 
-<style></style>
+<style scoped>
+#menu-container {
+  margin-bottom: 60px;
+}
+</style>

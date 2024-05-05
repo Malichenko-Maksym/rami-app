@@ -72,7 +72,7 @@ import NavigationBar from '../components/NavigationBar.vue'
 
 <style scoped>
 #categories {
-  margin-top: 20px;
+  margin-top: 0px;
 }
 
 #image {

@@ -37,7 +37,6 @@ const handleItemClick = () => {
   </div>
 </template>
 
-
 <style scoped>
 #item {
   width: 100%;
@@ -57,6 +56,7 @@ const handleItemClick = () => {
 #item:hover {
   cursor: pointer;
   opacity: 0.9;
+  border-color: var(--color-green)
 }
 
 #item>div:nth-of-type(2) {

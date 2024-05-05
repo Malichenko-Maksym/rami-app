@@ -13,33 +13,10 @@
         <li class="list-group-item" v-if="!isEditing">{{ phoneNumber }}</li>
         <input v-if="isEditing" v-model="editablePhoneNumber" class="form-control" type="tel">
       </ul>
-      <button @click="toggleEdit" class="btn">{{ isEditing ? 'Save' : 'Edit' }}</button>
-
-      <!-- Orders Table -->
-      <h5>Orders</h5>
-      <table class="table">
-        <thead>
-          <tr>
-            <th>Dish</th>
-            <th>Price</th>
-            <th>Address</th>
-            <th>Date</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr v-for="order in sortedOrders" :key="order.id">
-            <td>{{ order.ordered_dish }}</td>
-            <td>{{ order.order_price }}</td>
-            <td>{{ order.order_address }}</td>
-            <td>{{ order.order_datetime }}</td>
-          </tr>
-        </tbody>
-      </table>
+      <button @click="toggleEdit" class="btn">{{ isEditing ? 'Zapisz' : 'Edytuj' }}</button>
     </div>
   </div>
 </template>
-
-
 
 <script>
 import { getAuth, onAuthStateChanged } from "firebase/auth";
@@ -57,13 +34,7 @@ export default {
       editableUserInfo: '',
       editablePhoneNumber: '',
       isEditing: false,
-      orders: []
     };
-  },
-  computed: {
-    sortedOrders() {
-      return this.orders.sort((a, b) => new Date(b.order_datetime) - new Date(a.order_datetime));
-    }
   },
   methods: {
     toggleEdit() {
@@ -107,22 +78,7 @@ export default {
         this.userInfo = userData.user_info || 'Brak opisu';
         this.phoneNumber = userData.phone_number || 'Brak numeru telefonu';
       }
-
-      await this.loadOrders(userId);
     },
-    async loadOrders(userId) {
-      const db = getFirestore();
-      const auth = getAuth();
-      const user = auth.currentUser;
-
-      if (user) {
-        const ordersRef = collection(db, "orders");
-        const q = query(ordersRef, where("user_email", "==", user.email));
-        const querySnapshot = await getDocs(q);
-
-        this.orders = querySnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
-      }
-    }
   },
   created() {
     const auth = getAuth();
@@ -130,7 +86,6 @@ export default {
       if (user) {
         this.userEmail = user.email;
         await this.loadInitialData(user.uid);
-        await this.loadOrders(user.uid);
       } else {
         this.userEmail = 'No email available';
       }
@@ -144,7 +99,7 @@ export default {
 
 <style scoped>
 .card {
-  width: 60%;
+  /* width: 60%; */
   margin: 0 auto;
   border-radius: 12px !important;
 }
@@ -155,7 +110,7 @@ export default {
 }
 
 img {
-  width: 250px;
+  width: 200px;
   border-radius: 50%;
   margin: 20px auto 20px auto;
 }
@@ -190,7 +145,7 @@ button {
   }
 
   img {
-    width: 60%;
+    width: 150px;
   }
 
   input,

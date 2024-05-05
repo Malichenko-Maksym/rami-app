@@ -1,13 +1,5 @@
-<script>
-    import { onMounted } from 'vue';
-    import BigTitle from '../components/text/BigTitle.vue'
-    export default {
-        setup() {
-            onMounted(() => {
-                //console.log('dupenmachen')
-            })
-        }
-    }
+<script setup>
+import BigTitle from '../components/text/BigTitle.vue'
 </script>
 
 <template>
@@ -23,14 +15,18 @@
                 <p>
                     Przewidywany czas dostawy: 2h
                 </p>
-                <p>
-                    {{ $route.query.location }}
-                </p>
             </div>
-            <div class="row">
-                <router-link :to="{ name: 'Home' }">
-                    <button class="btn next-button">Wróć do ekranu głównego</button>
-                </router-link>
+            <div class="row" id="buttons">
+                <div class="col-md-6">
+                    <router-link :to="{ name: 'Home' }">
+                        <button class="btn next-button">Wróć na start</button>
+                    </router-link>
+                </div>
+                <div class="col-md-6">
+                    <router-link :to="{ name: 'Account' }">
+                        <button class="btn next-button orange">Zobacz listę zamówień</button>
+                    </router-link>
+                </div>
             </div>
         </div>
     </main>
@@ -38,15 +34,35 @@
 </template>
 
 <style scoped>
-main{
+main {
     padding-top: 150px;
     text-align: center;
 }
+
 img {
     width: 200px;
     margin: 0 auto;
 }
-h3{
+
+h3 {
     text-align: center !important;
+}
+
+#buttons>div:nth-of-type(1) button {
+    float: right;
+}
+
+#buttons>div:nth-of-type(2) button {
+    float: left;
+}
+
+.orange {
+    background-color: var(--color-orange) !important;
+}
+
+@media screen and (max-width: 900px) {
+    #buttons button {
+       float: none !important;
+    }
 }
 </style>

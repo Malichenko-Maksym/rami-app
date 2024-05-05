@@ -94,10 +94,6 @@ export default {
 </script>
 
 <style scoped>
-#map-area {
-    padding-bottom: 40px
-}
-
 #map-area>div:nth-of-type(1) {
     display: flex !important;
     flex-direction: row;
@@ -148,6 +144,10 @@ p {
         width: 40%;
         padding: 5px;
         margin-top: 10px;
+    }
+
+    #map-area {
+        padding-bottom: 40px
     }
 
 }

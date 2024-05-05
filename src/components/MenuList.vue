@@ -71,31 +71,31 @@ export default defineComponent({
 </script>
 
 <template>
- 
-  
- <div class="row">
- <h3>Zupy</h3>
-      <MenuListItem v-for="(item, index) in soupItems" :key="'soup-' + index" :imageUrl="item.imageUrl" @selectItem="handleSelectItem(item)">
-        <template #title>{{ item.title }}</template>
-        <template #description>{{ item.description }}</template>
-        <template #price>{{ item.price }}</template>
-      </MenuListItem>
-    </div>
+  <div class="row">
+    <h3>Zupy</h3>
+    <MenuListItem v-for="(item, index) in soupItems" :key="'soup-' + index" :imageUrl="item.imageUrl"
+      @selectItem="handleSelectItem(item)">
+      <template #title>{{ item.title }}</template>
+      <template #description>{{ item.description }}</template>
+      <template #price>{{ item.price }}</template>
+    </MenuListItem>
+  </div>
+
+  <div class="row">
+    <h3>Dania główne</h3>
+    <MenuListItem v-for="(item, index) in mainDishItems" :key="'main-' + index" :imageUrl="item.imageUrl"
+      @selectItem="handleSelectItem(item)">
+      <template #title>{{ item.title }}</template>
+      <template #description>{{ item.description }}</template>
+      <template #price>{{ item.price }}</template>
+    </MenuListItem>
+  </div>
 
 
-    <div class="row">
-      <h3>Dania główne</h3>
-      <MenuListItem v-for="(item, index) in mainDishItems" :key="'main-' + index" :imageUrl="item.imageUrl" @selectItem="handleSelectItem(item)">
-        <template #title>{{ item.title }}</template>
-        <template #description>{{ item.description }}</template>
-        <template #price>{{ item.price }}</template>
-      </MenuListItem>
-    </div>
-
-  
   <div class="row">
     <h3>Desery</h3>
-    <MenuListItem v-for="(item, index) in dessertItems" :key="'dessert-' + index" :imageUrl="item.imageUrl" @selectItem="handleSelectItem(item)">
+    <MenuListItem v-for="(item, index) in dessertItems" :key="'dessert-' + index" :imageUrl="item.imageUrl"
+      @selectItem="handleSelectItem(item)">
       <template #title>{{ item.title }}</template>
       <template #description>{{ item.description }}</template>
       <template #price>{{ item.price }}</template>
