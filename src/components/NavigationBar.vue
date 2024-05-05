@@ -24,7 +24,7 @@
 <style scoped>
 div {
     width: 100%;
-    position: absolute;  
+    position: absolute;
     background-color: var(--navigation-background);
     border-top: 1px solid var(--color-light-grey);
     bottom: 0;

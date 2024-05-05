@@ -1,7 +1,7 @@
 <script>
-    export default {
-        methods: {
-            async submitOrder() {
+export default {
+    methods: {
+        async submitOrder() {
             try {
                 // Access the device's camera
                 const stream = await navigator.mediaDevices.getUserMedia({ video: { facingMode: 'environment' } });
@@ -13,19 +13,19 @@
                 const track = stream.getVideoTracks()[0];
                 const capabilities = track.getCapabilities();
                 if (capabilities.torch) {
-                const toggleFlashlight = async () => {
-                    await track.applyConstraints({ advanced: [{ torch: true }] });
-                    await new Promise(resolve => setTimeout(resolve, 150));
-                    await track.applyConstraints({ advanced: [{ torch: false }] });
-                    await new Promise(resolve => setTimeout(resolve, 150));
-                };
+                    const toggleFlashlight = async () => {
+                        await track.applyConstraints({ advanced: [{ torch: true }] });
+                        await new Promise(resolve => setTimeout(resolve, 150));
+                        await track.applyConstraints({ advanced: [{ torch: false }] });
+                        await new Promise(resolve => setTimeout(resolve, 150));
+                    };
 
-                // Flash flashlight for 5 seconds (10 iterations)
-                for (let i = 0; i < 2; i++) {
-                    await toggleFlashlight();
-                }
+                    // Flash flashlight for 5 seconds (10 iterations)
+                    for (let i = 0; i < 2; i++) {
+                        await toggleFlashlight();
+                    }
                 } else {
-                console.warn('Flashlight not supported on this device.');
+                    console.warn('Flashlight not supported on this device.');
                 }
 
                 // Vibrate the device
@@ -37,9 +37,9 @@
                 // Handle errors if accessing the camera fails
                 console.error('Error accessing camera:', error);
             }
-            }
         }
-    };
+    }
+};
 </script>
 
 <template>
@@ -75,7 +75,7 @@
                 </div>
             </div>
             <div class="row">
-                <router-link @click="placeOrder" :to="{ name: 'Thanks', query: { location: $route.query.location} }">
+                <router-link @click="placeOrder" :to="{ name: 'Thanks', query: { location: $route.query.location } }">
                     <button class="btn next-button" @click="submitOrder"> Złóź zamówienie </button>
                 </router-link>
                 <p>Uwaga! Potwierdzonego zamówienia nie można anulować!</p>
@@ -85,7 +85,7 @@
 </template>
 
 <script setup>
-import firebase from '../firebase'; 
+import firebase from '../firebase';
 import 'firebase/firestore';
 
 import ReturnArrow from '../components/ReturnArrow.vue';
@@ -103,19 +103,15 @@ const placeOrder = async () => {
         const user = firebase.auth().currentUser;
         if (user) {
             const userEmail = user.email;
-
-            // Get the current date and time
             const currentDateTime = new Date().toLocaleString();
-
             const db = firebase.firestore();
-            const orderRef = db.collection('orders').doc(); // Generate a unique document ID
+            const orderRef = db.collection('orders').doc();
             await orderRef.set({
                 user_email: userEmail,
                 ordered_dish: title,
                 order_address: route.query.location,
                 order_price: price.value,
-                order_datetime: currentDateTime, // Adding the current date and time
-                // Add any other data you want to save
+                order_datetime: currentDateTime,
             });
             console.log('Order placed successfully!');
         } else {
@@ -144,7 +140,6 @@ const placeOrder = async () => {
 .item>h5,
 .item>p {
     width: 50%;
-    color: var(--color-black);
 }
 
 .item p {
@@ -157,18 +152,18 @@ const placeOrder = async () => {
 .row>p {
     margin-top: 20px;
     text-align: center;
-    color: var(--color-black);
 }
 
 a {
     text-align: center;
 }
 
-#price{
+#price {
     margin-top: 20px;
     margin-bottom: 20px;
 }
-#price > h3{
+
+#price>h3 {
     text-align: center;
     color: var(--color-black);
 }

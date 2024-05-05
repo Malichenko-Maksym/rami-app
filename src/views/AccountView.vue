@@ -34,7 +34,7 @@ import NavigationBar from '../components/NavigationBar.vue'
 </template>
 
 <style scoped>
-.scroll{
+.scroll {
     margin-top: 10px;
 }
 </style>

@@ -6,6 +6,4 @@
   <div></div>
 </template>
 
-<style scope>
-
-</style>
+<style scope></style>

@@ -85,9 +85,12 @@ th {
     padding: 10px;
 }
 
-table, tr, td, th {
-  background-color: var(--list-item-color) !important;
-  color: var(--color-black);
+table,
+tr,
+td,
+th {
+    background-color: var(--list-item-color) !important;
+    color: var(--color-black);
 }
 
 

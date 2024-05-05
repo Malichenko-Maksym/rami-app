@@ -17,10 +17,10 @@ export default defineComponent({
       const password = document.getElementById("inputPassword").value;
       try {
         const result = await signInWithEmailAndPassword(auth, email, password);
-        console.log(result);
+        // console.log(result);
         router.push({ name: 'Home' });
       } catch (error) {
-        console.error(error.code, error.message);
+        // console.error(error.code, error.message);
         alert("Błędne dane do logowania!");
       }
     };
@@ -31,10 +31,10 @@ export default defineComponent({
         // You can access the Google Access Token if you need to access the Google API
         // const credential = GoogleAuthProvider.credentialFromResult(result);
         // const token = credential.accessToken;
-        console.log(result);
+        // console.log(result);
         router.push({ name: 'Home' });
       } catch (error) {
-        console.error(error.code, error.message);
+        // console.error(error.code, error.message);
       }
     };
 

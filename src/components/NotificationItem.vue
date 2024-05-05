@@ -47,7 +47,7 @@ img {
 
 @media screen and (max-width: 900px) {
 
-    #item{
+    #item {
         width: 90%;
     }
 

@@ -74,17 +74,17 @@ export default {
             }
 
             if ('geolocation' in navigator) {
-            // Geolocation API is supported
-                console.log('geoloc supported')
+                // Geolocation API is supported
+                console.log('Geolocation supported')
                 navigator.geolocation.getCurrentPosition(success,
-                    position => {},
+                    position => { },
                     error => {
-                        console.log("nie powiodło sie");
+                        console.log("Location retrieval failed!");
                     }
                 )
             } else {
-            // Geolocation API is not supported
-            console.error('Geolocation is not supported by this browser.');
+                // Geolocation API is not supported
+                console.error('Geolocation is not supported by this browser.');
             }
         });
 

@@ -35,7 +35,7 @@ h3 {
     font-weight: bold;
 }
 
-p{
+p {
     color: #ffffff;
     margin-left: 40px;
     font-size: 1.1rem;
